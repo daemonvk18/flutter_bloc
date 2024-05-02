@@ -1,4 +1,6 @@
 Flutter BLoC State Management
+
+
 What is BLoC?
 BLoC stands for Business Logic Component. It's a design pattern for managing state in Flutter applications. BLoC separates the presentation layer from the business logic layer, making your codebase more maintainable and testable.
 
