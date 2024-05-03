@@ -2,7 +2,7 @@ import 'package:bloc_statemanagment/features/home/ui/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

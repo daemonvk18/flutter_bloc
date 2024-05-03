@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
               )),
             );
           case HomeLoadingSucessState:
-            final Sucessstate = state as HomeLoadingSucessState;
+            final sucessstate = state as HomeLoadingSucessState;
             return Scaffold(
               appBar: AppBar(
                 backgroundColor: Theme.of(context).primaryColor,
@@ -85,10 +85,10 @@ class _HomeState extends State<Home> {
               ),
               body: ListView.builder(
                   scrollDirection: Axis.vertical,
-                  itemCount: Sucessstate.products.length,
+                  itemCount: sucessstate.products.length,
                   itemBuilder: ((context, index) {
                     return ProductTile(
-                      productDataModel: Sucessstate.products[index],
+                      productDataModel: sucessstate.products[index],
                       homeBlocBloc: homeBloc,
                     );
                   })),
