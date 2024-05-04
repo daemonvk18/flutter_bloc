@@ -26,7 +26,14 @@ class _CartPageState extends State<CartPage> {
       ),
       body: BlocConsumer<BlocBloc, BlocState>(
         bloc: cartBloc,
-        listener: (context, state) {},
+        listener: (context, state) {
+          if (state is CartProductRemovedState) {
+            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+              content: Text("item removed"),
+              duration: Duration(seconds: 2),
+            ));
+          }
+        },
         listenWhen: (previous, current) => current is BlocActionState,
         buildWhen: (previous, current) => current is! BlocActionState,
         builder: (context, state) {

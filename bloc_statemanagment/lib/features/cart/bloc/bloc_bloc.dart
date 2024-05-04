@@ -19,6 +19,8 @@ class BlocBloc extends Bloc<BlocEvent, BlocState> {
 
   FutureOr<void> cartPageRemoveditemEvent(
       CartPageRemoveditemEvent event, Emitter<BlocState> emit) {
-    //cartitems.remove(value);
+    cartitems.remove(event.productdatamodel);
+    emit(CartProductRemovedState());
+    emit(CartSuccessState(cartproducts: cartitems));
   }
 }

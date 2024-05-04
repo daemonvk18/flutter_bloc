@@ -12,3 +12,5 @@ class CartSuccessState extends BlocState {
 
   CartSuccessState({required this.cartproducts});
 }
+
+class CartProductRemovedState extends BlocActionState {}
